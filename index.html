@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Blooms</title>
+
+
+  <meta name="description" content="Task Blooms - Grow your productivity, track daily progress, and build powerful streaks beautifully." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" href="Task bloosm logo.png" type="image/png" />
+</head>
+
+<body>
+
+  <main>
+    <div class="app">
+
+      <!-- ================= HEADER ================= -->
+      <header>
+
+        <div class="app-logo">
+          <img src="Task bloosm logo.png" alt="Task Blooms Logo" />
+        </div>
+
+        <p id="quote">Progress in Full Bloom.</p>
+
+        <div class="streak">
+          Streak: <span id="streakCount">0</span>
+        </div>
+
+        <button type="button" id="themeToggle">Night Mode</button>
+
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+
+      </header>
+
+      <!-- ================= CALENDAR SECTION ================= -->
+      <section class="calendar-tab">
+
+        <button type="button" id="calendarToggle">
+          View Growth Calendar
+        </button>
+
+        <div id="calendarContainer" class="calendar-hidden">
+          <div id="calendar"></div>
+        </div>
+
+      </section>
+
+      <!-- ================= TASK INPUT ================= -->
+      <section class="task-input">
+
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Plant a new task..."
+          aria-label="Task input"
+        />
+
+        <select id="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <button type="button" id="addBtn">Add</button>
+
+      </section>
+
+      <!-- ================= SEARCH ================= -->
+      <section class="search">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search tasks..."
+          aria-label="Search tasks"
+        />
+      </section>
+
+      <!-- ================= FILTERS ================= -->
+      <section class="filters">
+        <button type="button" data-filter="all" class="active">All</button>
+        <button type="button" data-filter="active">Active</button>
+        <button type="button" data-filter="completed">Completed</button>
+      </section>
+
+      <!-- ================= TASK LIST ================= -->
+      <section>
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage" style="display: none;">
+          No tasks found.
+        </p>
+      </section>
+
+      <!-- ================= PROGRESS ================= -->
+      <div class="progress">
+        Daily Progress: <span id="progressPercent">0%</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
